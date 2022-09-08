@@ -1,3 +1,5 @@
+'use strict';
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -9,31 +11,12 @@ const ingredients = [
 
 const ingredientsRef = document.querySelector('#ingredients');
 
-const addIngredientPotatoes = document.createElement('li');
-const addIngredientMushrooms = document.createElement('li');
-const addIngredientGarlic = document.createElement('li');
-const addIngredientTomatos = document.createElement('li');
-const addIngredientHerbs = document.createElement('li');
-const addIngredientCondiments = document.createElement('li');
+const listItems = ingredients.map((ingredient) => { 
+  const itemEl = document.createElement('li');
+  itemEl.textContent = ingredient;
+  itemEl.classList = 'item';
+  return itemEl;
+});
+ingredientsRef.append(...listItems);
 
-addIngredientPotatoes.textContent = 'Potatoes';
-addIngredientPotatoes.classList = 'item';
-
-addIngredientMushrooms.textContent = 'Mushrooms';
-addIngredientMushrooms.classList = 'item';
-
-addIngredientGarlic.textContent = 'Garlic';
-addIngredientGarlic.classList = 'item';
-
-addIngredientTomatos.textContent = 'Tomatos';
-addIngredientTomatos.classList = 'item';
-
-addIngredientHerbs.textContent = 'Herbs';
-addIngredientHerbs.classList = 'item';
-
-addIngredientCondiments.textContent = 'Condiments';
-addIngredientCondiments.classList = 'item';
-
-ingredientsRef.append(addIngredientPotatoes, addIngredientMushrooms, addIngredientGarlic, addIngredientTomatos, addIngredientHerbs, addIngredientCondiments);
-
-console.log(ingredientsRef);
+console.log(listItems);
