@@ -1,3 +1,5 @@
+'use strict';
+
 const inputRef = document.querySelector("#validation-input");
 
 const inputBlur = (event) => {

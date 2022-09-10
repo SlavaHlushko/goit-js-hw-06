@@ -1,3 +1,5 @@
+'use strict';
+
 const elementBtn = document.querySelector("#counter");
 const decrementBtn = elementBtn.firstElementChild;
 const incrementBtn = elementBtn.lastElementChild;
